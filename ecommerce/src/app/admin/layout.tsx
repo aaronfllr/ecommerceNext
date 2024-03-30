@@ -1,5 +1,7 @@
 import { Nav, NavLink } from "@/components/Nav";
 
+export const dynamic = "force-dynamic"; // force-dynamic lets the admin page not use caching to ensure most updated data with caveat being speed
+
 export default function AdminLayour({
     children,
     }: Readonly<{
@@ -16,4 +18,3 @@ export default function AdminLayour({
     <div className="container my-6">{children}</div>
     </>
 }
-//20:50
