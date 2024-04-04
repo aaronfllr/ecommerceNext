@@ -1,4 +1,4 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { PageHeader } from "../_components/pageHeader";
 import { Button } from "@/components/ui/button";
 import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell } from "@/components/ui/table";
@@ -65,7 +65,7 @@ async function ProductsTable() {
                                 </> 
                             ) : (
                                 <> 
-                                    <XCircle />
+                                    <XCircle className="stroke-destructive"/>
                                     <span className="sr-only">Unavailable for purchase</span>
                                 </>
                             )}
@@ -87,6 +87,7 @@ async function ProductsTable() {
                                     <DropdownMenuItem asChild>
                                         <Link href={`/admin/products/${product.id}/edit`}>Edit</Link>
                                     </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
                                     <ActiveToggleDropDownItem id={product.id} isAvailableForPurchase={product.isAvailableForPurchase} />
                                     <DeleteDropDownItem id={product.id} disabled={product._count.orders > 0} />
                                 </DropdownMenuContent>
