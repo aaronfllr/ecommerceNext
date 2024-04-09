@@ -1,3 +1,14 @@
 node_modules
 # Keep environment variables out of version control
 .env
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+.next
