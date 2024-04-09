@@ -18,7 +18,9 @@
   };
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = "echo hello from $GREET";
+  scripts = {
+    prisma.exec = "npx prisma $@";
+  };
 
   enterShell = ''
     hello
