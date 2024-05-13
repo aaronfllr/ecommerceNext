@@ -9,7 +9,7 @@ const getProducts = cache(() => {
         where: { isAvailableForPurchase: true },
         orderBy: { name: "asc" }
     })
-}, ["/products", "getProducts"])
+}, ["/products", "getProducts"], { revalidate: 60 * 60 * 24 })
 
 export default function ProductsPage() {
     return (
