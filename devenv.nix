@@ -7,6 +7,7 @@
   # https://devenv.sh/packages/
   packages = with pkgs; [
     openssl
+    stripe-cli
     sqlite
   ];
   # ++ lib.optionals (!config.container.isBuilding) [ pkgs.git ];
