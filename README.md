@@ -40,8 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Install stripe-cli
 
 In a separate terminal with from the active localhost:3000, run:
-'''bash
+```bash
 stripe login
 
 stripe listen --forward-to localhost:3000/webhooks/stripe
-'''
+```
